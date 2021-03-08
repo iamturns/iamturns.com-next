@@ -3,7 +3,7 @@
 # `>/dev/null 2>&1 || true` is used for "lint fix" commands to silence any errors that can't be automatically fixed. The lint command will report the errors instead.
 
 echo "💆 Sorting package.json..."
-sort-package-json "package.json" "packages/*/package.json"
+sort-package-json "package.json"
 
 echo "💆 Updating table of contents..."
 doctoc --update-only .

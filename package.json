@@ -6,18 +6,15 @@
     "start": "next start",
     "dev": "next dev",
     "format": "bash bin/format.sh",
-    "lint": "run-p lint-es lint-ts lint-md",
+    "lint": "run-p lint-*",
     "lint-es": "eslint --ext .js,.jsx,.ts,.tsx --format=pretty ./",
-    "lint-md": "markdownlint '**/*.md'",
     "lint-ts": "tsc --noEmit",
+    "lint-md": "markdownlint '**/*.md'",
     "test": "jest --passWithNoTests",
     "test--coverage": "npm run test -- --coverage",
     "test--watch": "npm run test -- --watch",
     "build": "next build",
-    "validate": "run-p --print-label lint test build && npm start",
-    "pkg:example-feature:build": "run-p pkg:hello:build-*",
-    "pkg:example-feature:build-src": "cd packages/hello && node bin/build.js",
-    "pkg:example-feature:build-ts": "cd packages/hello && tsc --emitDeclarationOnly"
+    "validate": "run-p --print-label lint test build"
   },
   "dependencies": {
     "next": "10.0.6",

@@ -3,12 +3,9 @@
 <!-- START doctoc generated TOC please keep comment here to allow auto update -->
 <!-- DON'T EDIT THIS SECTION, INSTEAD RE-RUN doctoc TO UPDATE -->
 
-- [Developing](#developing)
-  - [How do I setup the project for development?](#how-do-i-setup-the-project-for-development)
-  - [What's the development workflow?](#whats-the-development-workflow)
-  - [How should I manage environment variables?](#how-should-i-manage-environment-variables)
-  - [Why does each package have its own "build" command?](#why-does-each-package-have-its-own-build-command)
-  - [What's the best way to introduce a new dependency in all packages?](#whats-the-best-way-to-introduce-a-new-dependency-in-all-packages)
+- [How do I setup the project for development?](#how-do-i-setup-the-project-for-development)
+- [What's the development workflow?](#whats-the-development-workflow)
+- [How should I manage environment variables?](#how-should-i-manage-environment-variables)
 
 <!-- END doctoc generated TOC please keep comment here to allow auto update -->
 
@@ -56,13 +53,3 @@ Files are loaded in the following order:
 4. `.env`
 
    Default environment settings.
-
-## Why does each package have its own "build" command?
-
-Lerna is able to run package commands in topological order, which ensures dependencies are built before they are used.
-
-## What's the best way to introduce a new dependency in all packages?
-
-```bash
-npx lerna add <pkg> --exact
-```

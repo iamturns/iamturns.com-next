@@ -2,10 +2,6 @@
 
 This guide is intended for maintainers (anybody with commit access).
 
-## Code of Conduct
-
-Please make sure you're familiar with and follow the [CODE_OF_CONDUCT.md](CODE_OF_CONDUCT.md).
-
 ## Reviewing Pull Requests
 
 Checklist:
