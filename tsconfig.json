@@ -1,0 +1,22 @@
+{
+  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx"],
+  "exclude": ["node_modules"],
+  "compilerOptions": {
+    /* Build */
+    "noEmit": true, // Next.js requirement
+    "module": "esnext", // Next.js requirement, support dynamic import()
+    "target": "es5", // Next.js requirement
+    "lib": ["dom", "dom.iterable", "esnext"], // Next.js requirement
+    "jsx": "preserve", // Next.js requirement, emit tsx as jsx unchanged
+
+    /* Additional Options */
+    "strict": true, // Of course!
+    "moduleResolution": "node", // Yup, we are using Node
+    "allowJs": true, // Next.js requirement, allow importing .js files
+    "resolveJsonModule": true, // Allow importing .json files
+    "isolatedModules": true, // Next.js requires this for Babel
+    "esModuleInterop": true, // Improve importing from CJS modules, recommended by TS: https://www.typescriptlang.org/docs/handbook/release-notes/typescript-2-7.html#support-for-import-d-from-cjs-from-commonjs-modules-with---esmoduleinterop
+    "skipLibCheck": true, // Significant perf increase by skipping checking .d.ts files, particularly those in node_modules. Recommended by TS.
+    "forceConsistentCasingInFileNames": true // Error out if import and file system have a casing mismatch. Recommended by TS.
+  }
+}
